@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, "build")));
 // Catch-all route to serve 'index.html' for any non-API request (like React routing)
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "build", "index.html"));
-});
+});    
 
 app.listen(port, () => {
     console.log(`React app started on http://localhost:${port}`);
